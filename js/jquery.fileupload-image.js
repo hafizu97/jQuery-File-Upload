@@ -14,18 +14,18 @@
 
 ;(function (factory) {
     'use strict';
-    if (typeof define === 'function' && define.amd) {
-        // Register as an anonymous AMD module:
-        define([
-            'jquery',
-            'load-image',
-            'load-image-meta',
-            'load-image-scale',
-            'load-image-exif',
-            'canvas-to-blob',
-            './jquery.fileupload-process'
-        ], factory);
-    } else if (typeof exports === 'object') {
+    // if (typeof define === 'function' && define.amd) {
+    //     // Register as an anonymous AMD module:
+    //     define([
+    //         'jquery',
+    //         'load-image',
+    //         'load-image-meta',
+    //         'load-image-scale',
+    //         'load-image-exif',
+    //         'canvas-to-blob',
+    //         './jquery.fileupload-process'
+    //     ], factory);
+    // } else if (typeof exports === 'object') {
         // Node/CommonJS:
         factory(
             require('jquery'),
@@ -36,13 +36,13 @@
             require('blueimp-canvas-to-blob'),
             require('./jquery.fileupload-process')
         );
-    } else {
-        // Browser globals:
-        factory(
-            window.jQuery,
-            window.loadImage
-        );
-    }
+    // } else {
+    //     // Browser globals:
+    //     factory(
+    //         window.jQuery,
+    //         window.loadImage
+    //     );
+    // }
 }(function ($, loadImage) {
     'use strict';
 
